@@ -7,7 +7,8 @@ export const MAIN_CONTENT_PADDING = 6;
 export const MONO_LABEL_FONT_SIZE = "11px";
 export const INVITE_CODE_FONT_SIZE = "20px";
 export const INVITE_CODE_LETTER_SPACING = "0.25em";
-export const WATCHLIST_SEARCH_WIDTH = 320;
+export const TABLE_SEARCH_WIDTH = 320;
+export const TABLE_ROW_ACTIONS_WIDTH = 48;
 export const WATCHLIST_RESOURCE_SELECT_WIDTH = 280;
 export const WATCHLIST_ACTIONS_SELECT_WIDTH = 320;
 /** Selected action chips shown before collapsing to "+N" (while unfocused) */

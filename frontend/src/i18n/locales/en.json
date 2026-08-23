@@ -459,7 +459,8 @@
       "createError": "Couldn't create preset. Try again.",
       "editError": "Couldn't update preset. Try again.",
       "deleteSuccess": "Preset deleted.",
-      "deleteError": "Couldn't delete preset. Try again."
+      "deleteError": "Couldn't delete preset. Try again.",
+      "search": "Search presets"
     },
     "aiAccess": {
       "summary_one": "{{count}} AI connection across your company.",
