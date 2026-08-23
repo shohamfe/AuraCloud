@@ -7,19 +7,10 @@ import {
   inferServiceFromArn,
   resolveWatchedActions,
 } from "@/pages/dashboard/helpers/dashboard.helpers";
-import type { WatchlistResource } from "@/services/resources.service";
-import type {
-  ArnPermissionData,
-  ResourceStatus,
-} from "@/services/types/resources.types";
 import Grid from "@mui/material/Grid";
+import type { ResourceGridProps } from "@/pages/dashboard/types/dashboard.types";
 import React from "react";
 
-interface ResourceGridProps {
-  resources: WatchlistResource[];
-  permissionsMap: Record<string, ArnPermissionData>;
-  resourceStatuses: Record<string, ResourceStatus>;
-}
 
 const ResourceGrid: React.FC<ResourceGridProps> = ({
   resources,

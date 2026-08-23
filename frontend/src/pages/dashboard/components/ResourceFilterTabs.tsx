@@ -4,16 +4,10 @@ import {
   FilterTabCount,
   FilterTabsRow,
 } from "@/pages/dashboard/components/dashboard.styled";
-import type { FilterTabValue } from "@/pages/dashboard/types/dashboard.types";
+import type { ResourceFilterTabsProps } from "@/pages/dashboard/types/dashboard.types";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-interface ResourceFilterTabsProps {
-  activeFilter: FilterTabValue;
-  tabCounts: Record<FilterTabValue, number>;
-  showCounts: boolean;
-  onFilterChange: (filter: FilterTabValue) => void;
-}
 
 const ResourceFilterTabs: React.FC<ResourceFilterTabsProps> = ({
   activeFilter,

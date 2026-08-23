@@ -10,16 +10,11 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import { getActionDotColor } from "@/components/resourceCard/helpers/resourceCard.helpers";
-import type { ResourceCardAction } from "@/components/resourceCard/types/resourceCard.types";
-import type { StatusTagVariant } from "@/components/statusTag/types/statusTag.types";
 import { useHover } from "@uidotdev/usehooks";
+import type { ResourceCardMoreActionsProps } from "@/components/resourceCard/types/resourceCard.types";
 import React, { useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-interface ResourceCardMoreActionsProps {
-  actions: ResourceCardAction[];
-  resourceStatus: StatusTagVariant;
-}
 
 const ResourceCardMoreActions: React.FC<ResourceCardMoreActionsProps> = ({
   actions,

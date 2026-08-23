@@ -5,11 +5,9 @@ import {
 } from "@/components/resourceCard/components/resourceCard.styled";
 import { splitArnForDisplay } from "@/helpers/arn.helpers";
 import Tooltip from "@mui/material/Tooltip";
+import type { ResourceCardArnProps } from "@/components/resourceCard/types/resourceCard.types";
 import React from "react";
 
-interface ResourceCardArnProps {
-  arn: string;
-}
 
 const ResourceCardArn: React.FC<ResourceCardArnProps> = ({ arn }) => {
   const { head, tail } = splitArnForDisplay(arn);

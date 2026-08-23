@@ -7,8 +7,6 @@ import {
   StatusFooterMessage,
 } from "@/components/resourceCard/components/resourceCard.styled";
 import { groupBlockedActionsByCause } from "@/components/resourceCard/helpers/resourceCard.helpers";
-import type { ResourceCardAction } from "@/components/resourceCard/types/resourceCard.types";
-import type { StatusTagVariant } from "@/components/statusTag/types/statusTag.types";
 import Button from "@mui/material/Button";
 import Grow from "@mui/material/Grow";
 import Popper from "@mui/material/Popper";
@@ -16,13 +14,10 @@ import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import { useHover } from "@uidotdev/usehooks";
+import type { ResourceCardStatusFooterProps } from "@/components/resourceCard/types/resourceCard.types";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-interface ResourceCardStatusFooterProps {
-  status: StatusTagVariant;
-  actions: ResourceCardAction[];
-}
 
 const ResourceCardStatusFooter: React.FC<ResourceCardStatusFooterProps> = ({
   status,

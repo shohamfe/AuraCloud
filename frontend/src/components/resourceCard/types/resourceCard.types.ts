@@ -25,3 +25,17 @@ export interface ResourceCardActionListProps {
   remainingActions: ResourceCardAction[];
   resourceStatus: StatusTagVariant;
 }
+
+export interface ResourceCardArnProps {
+  arn: string;
+}
+
+export interface ResourceCardStatusFooterProps {
+  status: StatusTagVariant;
+  actions: ResourceCardAction[];
+}
+
+export interface ResourceCardMoreActionsProps {
+  actions: ResourceCardAction[];
+  resourceStatus: StatusTagVariant;
+}
