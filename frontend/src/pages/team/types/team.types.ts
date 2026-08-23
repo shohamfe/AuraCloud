@@ -132,3 +132,16 @@ export interface PresetsTableProps {
   onEdit: (preset: WatchlistPreset) => void;
   onDelete: (preset: WatchlistPreset) => void;
 }
+
+export interface AiAccessColumnActions {
+  currentCustomerId: string | undefined;
+  onDisconnect: (grant: CompanyConnectedClient) => void;
+  isRowPending: (grantId: string) => boolean;
+}
+
+export interface PresetColumnActions {
+  teams: Team[];
+  employees: Employee[];
+  onEdit: (preset: WatchlistPreset) => void;
+  onDelete: (preset: WatchlistPreset) => void;
+}

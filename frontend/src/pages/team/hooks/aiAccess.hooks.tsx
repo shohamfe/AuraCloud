@@ -7,7 +7,10 @@ import {
   isExternalConnection,
   resolveConnectionOrigin,
 } from "@/pages/team/helpers/team.helpers";
-import type { CompanyConnectedClient } from "@/pages/team/types/team.types";
+import type {
+  AiAccessColumnActions,
+  CompanyConnectedClient,
+} from "@/pages/team/types/team.types";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
@@ -20,11 +23,6 @@ import { useTranslation } from "react-i18next";
 
 const ACTIONS_COLUMN_SIZE = 48;
 
-interface AiAccessColumnActions {
-  currentCustomerId: string | undefined;
-  onDisconnect: (grant: CompanyConnectedClient) => void;
-  isRowPending: (grantId: string) => boolean;
-}
 
 export const useAiAccessColumns = ({
   currentCustomerId,

@@ -1,13 +1,13 @@
 import IconButton from "@mui/material/IconButton";
 import InputAdornment from "@mui/material/InputAdornment";
-import TextField, { type TextFieldProps } from "@mui/material/TextField";
+import TextField from "@mui/material/TextField";
 import Tooltip from "@mui/material/Tooltip";
 import { useTheme } from "@mui/material/styles";
 import { EyeIcon, EyeSlashIcon } from "@phosphor-icons/react";
+import type { PasswordFieldProps } from "@/components/passwordField/types/passwordField.types";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-type PasswordFieldProps = Omit<TextFieldProps, 'type'>;
 
 const PasswordField: React.FC<PasswordFieldProps> = (props) => {
   const { t } = useTranslation();

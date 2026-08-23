@@ -5,6 +5,7 @@ import {
   storeToken,
 } from "@/services/auth.service";
 import type { AuthCustomer } from "@/services/types/auth.types";
+import type { AuthContextValue } from "@/context/auth/types/authContext.types";
 import React, {
   createContext,
   useCallback,
@@ -13,13 +14,6 @@ import React, {
   useState,
 } from "react";
 
-interface AuthContextValue {
-  customer: AuthCustomer | null;
-  isLoading: boolean;
-  setAuth: (token: string, customer: AuthCustomer) => void;
-  updateCustomer: (customer: AuthCustomer) => void;
-  logout: () => void;
-}
 
 const AuthContext = createContext<AuthContextValue | null>(null);
 

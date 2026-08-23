@@ -2,17 +2,9 @@ import { TABLE_ROW_ACTIONS_WIDTH, TABLE_SEARCH_WIDTH } from "@/constants";
 import InputAdornment from "@mui/material/InputAdornment";
 import { useTheme } from "@mui/material/styles";
 import { MagnifyingGlassIcon } from "@phosphor-icons/react";
-import {
-  useMaterialReactTable,
-  type MRT_RowData,
-  type MRT_TableOptions,
-} from "material-react-table";
-import React from "react";
+import { useMaterialReactTable, type MRT_RowData } from "material-react-table";
+import type { AuraTableOptions } from "@/hooks/types/table.types";
 
-interface AuraTableOptions<TData extends MRT_RowData> extends MRT_TableOptions<TData> {
-  searchPlaceholder: string;
-  searchInputRef?: React.Ref<HTMLInputElement>;
-}
 
 export const useAuraTable = <TData extends MRT_RowData>({
   searchPlaceholder,
