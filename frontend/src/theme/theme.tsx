@@ -1,10 +1,5 @@
 import { createTheme } from "@mui/material/styles";
-import {
-  CheckCircleIcon,
-  InfoIcon,
-  WarningCircleIcon,
-  WarningIcon,
-} from "@phosphor-icons/react";
+import { CheckCircleIcon, InfoIcon, WarningCircleIcon, WarningIcon } from "@phosphor-icons/react";
 
 /**
  * MUI theme built from Figma design tokens.
@@ -54,21 +49,22 @@ const theme = createTheme({
     // Custom Figma tokens not covered by standard MUI palette slots
     surface: {
       canvas: "#070c15", // color/surface/canvas  (page background — deeper for contrast)
-      base:   "#0d1424", // color/surface/base    (card background)
+      base: "#0d1424", // color/surface/base    (card background)
       subtle: "#0a1020", // color/surface/subtle  (sidebar background)
-      glow:   "rgba(167,139,250,0.10)", // color/surface/glow — matched to new primary, restrained
+      glow: "rgba(167,139,250,0.10)", // color/surface/glow — matched to new primary, restrained
     },
 
     border: {
       default: "#1a2740", // color/border/default — more visible, blue-shifted for tech feel
-      strong:  "#2d4060", // color/border/strong
-      glow:    "rgba(167,139,250,0.20)", // color/border/glow
+      strong: "#2d4060", // color/border/strong
+      glow: "rgba(167,139,250,0.20)", // color/border/glow
     },
   },
 
   typography: {
     fontFamily: '"Rubik", sans-serif',
-    fontFamilyMono: '"JetBrains Mono", "Fira Code", ui-monospace, "Cascadia Code", "Consolas", monospace',
+    fontFamilyMono:
+      '"JetBrains Mono", "Fira Code", ui-monospace, "Cascadia Code", "Consolas", monospace',
     h4: {
       fontSize: "34px",
       fontWeight: 400,
@@ -156,21 +152,6 @@ const theme = createTheme({
     MuiTooltip: {
       defaultProps: {
         followCursor: true,
-      },
-    },
-    MuiTableHead: {
-      styleOverrides: {
-        // Round the two outer corners of the table header so its edge cells match
-        // the app's rounded-surface language. Applied globally so every data table
-        // (employees, presets, watchlist) gets it for free.
-        root: ({ theme }) => ({
-          "& tr:first-of-type th:first-of-type": {
-            borderTopLeftRadius: theme.shape.borderRadius,
-          },
-          "& tr:first-of-type th:last-of-type": {
-            borderTopRightRadius: theme.shape.borderRadius,
-          },
-        }),
       },
     },
     MuiAlert: {

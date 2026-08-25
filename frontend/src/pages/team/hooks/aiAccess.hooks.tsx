@@ -7,7 +7,10 @@ import {
   isExternalConnection,
   resolveConnectionOrigin,
 } from "@/pages/team/helpers/team.helpers";
-import type { CompanyConnectedClient } from "@/pages/team/types/team.types";
+import type {
+  AiAccessColumnActions,
+  CompanyConnectedClient,
+} from "@/pages/team/types/team.types";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
@@ -20,13 +23,7 @@ import { useTranslation } from "react-i18next";
 
 const ACTIONS_COLUMN_SIZE = 48;
 
-interface AiAccessColumnActions {
-  currentCustomerId: string | undefined;
-  onDisconnect: (grant: CompanyConnectedClient) => void;
-  isRowPending: (grantId: string) => boolean;
-}
 
-/** Column definitions for the company AI-access table. */
 export const useAiAccessColumns = ({
   currentCustomerId,
   onDisconnect,
@@ -96,7 +93,7 @@ export const useAiAccessColumns = ({
 
               {/* Only the exception is tagged — a badge on every row is a badge nobody reads. */}
               {isExternalConnection(grant) && (
-                <StatusTag variant="warning" label={t("team.aiAccess.externalTag")} />
+                <StatusTag variant="external" label={t("team.aiAccess.externalTag")} />
               )}
 
               {extraAddresses > 0 && (

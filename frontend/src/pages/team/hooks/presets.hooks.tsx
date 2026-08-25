@@ -4,7 +4,10 @@ import {
   resolveCreatedByName,
   resolvePresetScopeLabel,
 } from "@/pages/team/helpers/team.helpers";
-import type { Employee, Team, WatchlistPreset } from "@/pages/team/types/team.types";
+import type {
+  PresetColumnActions,
+  WatchlistPreset,
+} from "@/pages/team/types/team.types";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
@@ -17,14 +20,7 @@ import { useTranslation } from "react-i18next";
 
 const ACTIONS_COLUMN_SIZE = 96;
 
-interface PresetColumnActions {
-  teams: Team[];
-  employees: Employee[];
-  onEdit: (preset: WatchlistPreset) => void;
-  onDelete: (preset: WatchlistPreset) => void;
-}
 
-/** Column definitions for the presets table. */
 export const usePresetColumns = ({
   teams,
   employees,
