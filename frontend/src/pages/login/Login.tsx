@@ -33,7 +33,9 @@ const Login: React.FC = () => {
   const { customer } = useAuth();
   const { mutate: doLogin, isPending, error } = useLogin();
 
-  const { register, handleSubmit, formState: { errors } } = useForm<LoginFormValues>();
+  const { register, handleSubmit, formState: { errors } } = useForm<LoginFormValues>({
+    defaultValues: { email: "demo@aura.com", password: "demo" },
+  });
 
   const nextPath = resolveNextPath(searchParams.get("next"));
 
