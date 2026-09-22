@@ -2,6 +2,19 @@
   <img src="./public/aura_big_logo.png" alt="Aura Cloud Logo" width="600" />
 </p>
 
+<p align="center">
+  <a href="https://aura-cloud.shoham-fe.dev">
+    <img src="https://img.shields.io/badge/▶%20%20TRY%20THE%20LIVE%20DEMO-aura--cloud.shoham--fe.dev-a78bfa?style=for-the-badge&labelColor=0f172a" alt="Try the live Aura Cloud demo" height="44" />
+  </a>
+</p>
+
+<p align="center">
+  <b>No signup. No AWS account. No setup.</b><br />
+  Any email and password logs you straight into a fully populated dashboard.
+</p>
+
+---
+
 # Aura Cloud — Real-Time Cloud Diagnostics for Developers
 
 > [!NOTE]

@@ -31,6 +31,8 @@ export const ONBOARD_REDIRECT_DELAY_MS = 1500;
 // External links / domain
 export const AURA_CLOUD_DOMAIN = "https://aura-cloud.com";
 
+export const GITHUB_REPO_URL = "https://github.com/shohamfe/AuraCloud";
+
 /**
  * Base URL of the api-server.
  * Set via `VITE_API_BASE_URL` in `frontend/.env` (or per-environment `.env.{mode}` files).

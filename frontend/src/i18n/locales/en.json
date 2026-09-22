@@ -21,7 +21,8 @@
     "resourceWatchList": "Resource Watchlist",
     "settings": "Settings",
     "team": "Teams",
-    "signOut": "Sign Out"
+    "signOut": "Sign Out",
+    "github": "GitHub"
   },
   "app": {
     "name": "Aura Cloud",

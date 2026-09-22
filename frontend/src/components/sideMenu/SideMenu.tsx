@@ -7,6 +7,7 @@ import MenuItem from '@/components/menuItem/MenuItem';
 import SideMenuLogo from '@/components/sideMenu/components/SideMenuLogo';
 import SideMenuProfile from '@/components/sideMenu/components/SideMenuProfile';
 import SideMenuFooter from '@/components/sideMenu/components/SideMenuFooter';
+import SideMenuGithubLink from '@/components/sideMenu/components/SideMenuGithubLink';
 import { NAV_ITEMS } from '@/components/sideMenu/helpers/sideMenu.helpers';
 import { SidebarRoot, NavList, BottomContainer } from '@/components/sideMenu/components/sideMenu.styled';
 
@@ -40,6 +41,8 @@ const SideMenu: React.FC = () => {
       </NavList>
 
       <BottomContainer>
+        <SideMenuGithubLink />
+
         <Divider sx={(theme) => ({ borderColor: theme.palette.border.strong })} />
         <SideMenuProfile />
         <Divider sx={(theme) => ({ borderColor: theme.palette.border.strong })} />
