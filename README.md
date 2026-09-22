@@ -2,9 +2,11 @@
   <img src="./public/aura_big_logo.png" alt="Aura Cloud Logo" width="600" />
 </p>
 
+# Demo 🔗
+
 <p align="center">
   <a href="https://aura-cloud.shoham-fe.dev">
-    <img src="https://img.shields.io/badge/▶%20%20TRY%20THE%20LIVE%20DEMO-aura--cloud.shoham--fe.dev-a78bfa?style=for-the-badge&labelColor=0f172a" alt="Try the live Aura Cloud demo" height="44" />
+    <img src="https://img.shields.io/badge/TRY%20THE%20LIVE%20DEMO-aura--cloud.shoham--fe.dev-a78bfa?style=for-the-badge&labelColor=0f172a" alt="Try the live Aura Cloud demo" width="560" />
   </a>
 </p>
 
