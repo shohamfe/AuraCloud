@@ -1,3 +1,4 @@
+import { API_BASE_URL } from "@/constants";
 import type {
   AuthCustomer,
   AuthResponse,
@@ -20,7 +21,7 @@ export interface AwsUserOption {
   arn: string | null;
 }
 
-const API_BASE = "http://localhost:3000/api";
+const API_BASE = `${API_BASE_URL}/api`;
 
 const AUTH_TOKEN_KEY = "aura_auth_token";
 

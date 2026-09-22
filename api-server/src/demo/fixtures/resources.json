@@ -1,0 +1,145 @@
+[
+  {
+    "_id": "6a96b3b1b4827f7cf386fc41",
+    "arn": "arn:aws:ec2:eu-north-1:123456789012:instance/i-04f5b67d37c7c2dc1",
+    "accountId": "123456789012",
+    "name": "prod-db-server",
+    "region": "eu-north-1",
+    "resourceType": "EC2Instance",
+    "createdAt": "2026-09-01T11:14:57.687Z",
+    "lastSyncedAt": "2026-09-22T10:21:57.126Z",
+    "updatedAt": "2026-09-22T10:21:57.135Z",
+    "metadata": {
+      "InstanceType": "t3.micro",
+      "State": {
+        "Code": 80,
+        "Name": "stopped"
+      },
+      "region": "eu-north-1"
+    }
+  },
+  {
+    "_id": "6a96b3b1b4827f7cf386fc42",
+    "arn": "arn:aws:ec2:eu-north-1:123456789012:instance/i-0da92c89af81a6e8b",
+    "accountId": "123456789012",
+    "name": "stage-db-server",
+    "region": "eu-north-1",
+    "resourceType": "EC2Instance",
+    "createdAt": "2026-09-01T11:14:57.687Z",
+    "lastSyncedAt": "2026-09-22T10:21:57.126Z",
+    "updatedAt": "2026-09-22T10:21:57.135Z",
+    "metadata": {
+      "InstanceType": "t3.micro",
+      "State": {
+        "Code": 80,
+        "Name": "stopped"
+      },
+      "region": "eu-north-1"
+    }
+  },
+  {
+    "_id": "6a8dbc90b4827f7cf37d7e9f",
+    "arn": "arn:aws:s3:::aura-cloud-blocked-group-bucket",
+    "accountId": "123456789012",
+    "name": "aura-cloud-blocked-group-bucket",
+    "region": "",
+    "resourceType": "S3Bucket",
+    "createdAt": "2026-08-25T16:02:23.928Z",
+    "lastSyncedAt": "2026-09-22T10:21:57.126Z",
+    "updatedAt": "2026-09-22T10:21:57.135Z",
+    "metadata": {
+      "CreationDate": "2026-04-23T15:14:13.000Z",
+      "bucketLocation": "eu-central-1"
+    }
+  },
+  {
+    "_id": "6a8dbc90b4827f7cf37d7e9c",
+    "arn": "arn:aws:s3:::aura-cloud-blocked-role-bucket",
+    "accountId": "123456789012",
+    "name": "aura-cloud-blocked-role-bucket",
+    "region": "",
+    "resourceType": "S3Bucket",
+    "createdAt": "2026-08-25T16:02:23.928Z",
+    "lastSyncedAt": "2026-09-22T10:21:57.126Z",
+    "updatedAt": "2026-09-22T10:21:57.135Z",
+    "metadata": {
+      "CreationDate": "2026-06-04T17:42:01.000Z",
+      "bucketLocation": "eu-central-1"
+    }
+  },
+  {
+    "_id": "6a8dbc90b4827f7cf37d7e9d",
+    "arn": "arn:aws:s3:::aura-cloud-blocked-sso-user-bucket",
+    "accountId": "123456789012",
+    "name": "aura-cloud-blocked-sso-user-bucket",
+    "region": "",
+    "resourceType": "S3Bucket",
+    "createdAt": "2026-08-25T16:02:23.928Z",
+    "lastSyncedAt": "2026-09-22T10:21:57.126Z",
+    "updatedAt": "2026-09-22T10:21:57.135Z",
+    "metadata": {
+      "CreationDate": "2026-04-23T14:30:43.000Z",
+      "bucketLocation": "eu-north-1"
+    }
+  },
+  {
+    "_id": "6a8dbc90b4827f7cf37d7e99",
+    "arn": "arn:aws:s3:::aura-cloud-bucket",
+    "accountId": "123456789012",
+    "name": "aura-cloud-bucket",
+    "region": "",
+    "resourceType": "S3Bucket",
+    "createdAt": "2026-08-25T16:02:23.928Z",
+    "lastSyncedAt": "2026-09-22T10:21:57.126Z",
+    "updatedAt": "2026-09-22T10:21:57.135Z",
+    "metadata": {
+      "CreationDate": "2026-04-20T10:36:42.000Z",
+      "bucketLocation": "eu-north-1"
+    }
+  },
+  {
+    "_id": "6a8dbc90b4827f7cf37d7e9a",
+    "arn": "arn:aws:s3:::aura-cloud-user-identity-bucket",
+    "accountId": "123456789012",
+    "name": "aura-cloud-user-identity-bucket",
+    "region": "",
+    "resourceType": "S3Bucket",
+    "createdAt": "2026-08-25T16:02:23.928Z",
+    "lastSyncedAt": "2026-09-22T10:21:57.126Z",
+    "updatedAt": "2026-09-22T10:21:57.135Z",
+    "metadata": {
+      "CreationDate": "2026-04-23T12:46:32.000Z",
+      "bucketLocation": "eu-north-1"
+    }
+  },
+  {
+    "_id": "6a8dbc90b4827f7cf37d7e9e",
+    "arn": "arn:aws:s3:::aura-public-templates",
+    "accountId": "123456789012",
+    "name": "aura-public-templates",
+    "region": "",
+    "resourceType": "S3Bucket",
+    "createdAt": "2026-08-25T16:02:23.928Z",
+    "lastSyncedAt": "2026-09-22T10:21:57.126Z",
+    "updatedAt": "2026-09-22T10:21:57.135Z",
+    "metadata": {
+      "CreationDate": "2026-05-23T10:32:59.000Z",
+      "bucketLocation": "eu-central-1"
+    }
+  },
+  {
+    "_id": "6a8dbc90b4827f7cf37d7e9b",
+    "arn": "arn:aws:s3:::block-sales-group",
+    "accountId": "123456789012",
+    "name": "block-sales-group",
+    "region": "",
+    "resourceType": "S3Bucket",
+    "createdAt": "2026-08-25T16:02:23.928Z",
+    "lastSyncedAt": "2026-09-22T10:21:57.126Z",
+    "updatedAt": "2026-09-22T10:21:57.135Z",
+    "metadata": {
+      "CreationDate": "2026-08-12T19:56:55.000Z",
+      "bucketLocation": "eu-central-1"
+    }
+  }
+]

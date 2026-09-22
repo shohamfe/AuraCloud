@@ -1,0 +1,1 @@
+{"resources":[{"arn":"arn:aws:s3:::aura-cloud-bucket","actions":["s3:*"]},{"arn":"arn:aws:s3:::aura-cloud-blocked-group-bucket","actions":["s3:Put*"]}]}
