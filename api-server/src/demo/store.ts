@@ -1,16 +1,18 @@
-import company from "./fixtures/company.json" with { type: "json" };
-import inviteCode from "./fixtures/invite-code.json" with { type: "json" };
-import initialTeams from "./fixtures/teams.json" with { type: "json" };
-import initialEmployees from "./fixtures/employees.json" with { type: "json" };
-import awsUsers from "./fixtures/aws-users.json" with { type: "json" };
-import initialWatchlistPresets from "./fixtures/watchlist-presets.json" with { type: "json" };
-import userPermissions from "./fixtures/user-permissions.json" with { type: "json" };
-import initialUserResourceWatchlist from "./fixtures/user-resource-watchlist.json" with { type: "json" };
-import presetResources from "./fixtures/user-resource-watchlist-preset.json" with { type: "json" };
-import resources from "./fixtures/resources.json" with { type: "json" };
-import resourceActionsByServiceRaw from "./fixtures/resource-actions.json" with { type: "json" };
+import {
+  awsUsersFixture as awsUsers,
+  companyFixture as company,
+  employeesFixture as initialEmployees,
+  inviteCodeFixture as inviteCode,
+  presetResourcesFixture as presetResources,
+  resourceActionsFixture,
+  resourcesFixture as resources,
+  teamsFixture as initialTeams,
+  userPermissionsFixture as userPermissions,
+  userResourceWatchlistFixture as initialUserResourceWatchlist,
+  watchlistPresetsFixture as initialWatchlistPresets,
+} from "./fixtures.data.js";
 
-const resourceActionsByService = resourceActionsByServiceRaw as Record<string, unknown[]>;
+const resourceActionsByService = resourceActionsFixture as Record<string, unknown[]>;
 
 export interface DemoEmployee {
   _id: string;
