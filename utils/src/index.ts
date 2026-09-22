@@ -1,7 +1,6 @@
 import { createClient } from 'redis';
 
 type AppRedisClient = ReturnType<typeof createClient>;
-import { RedisMemoryServer } from 'redis-memory-server';
 import mongoose, { type InferSchemaType, type HydratedDocument } from 'mongoose';
 import dotenv from 'dotenv';
 
@@ -19,7 +18,6 @@ function resolveRedisUrl(): string {
 }
 
 let redisClientPromise: Promise<AppRedisClient> | null = null;
-let memoryServer: RedisMemoryServer | undefined;
 
 async function connectSharedRedis(url: string): Promise<AppRedisClient> {
   const client = createClient({ url });
@@ -30,19 +28,8 @@ async function connectSharedRedis(url: string): Promise<AppRedisClient> {
   return client;
 }
 
-async function connectMemoryServerRedis(): Promise<AppRedisClient> {
-  memoryServer ??= new RedisMemoryServer();
-  const host = await memoryServer.getHost();
-  const port = await memoryServer.getPort();
-  return connectSharedRedis(`redis://${host}:${port}`);
-}
-
 export async function getRedisClient(): Promise<AppRedisClient> {
-  redisClientPromise ??= (async () => {
-    const useMemory = process.env.REDIS_USE_MEMORY_SERVER === 'true' || process.env.REDIS_USE_MEMORY_SERVER === '1';
-    if (useMemory) return connectMemoryServerRedis();
-    return connectSharedRedis(resolveRedisUrl());
-  })();
+  redisClientPromise ??= connectSharedRedis(resolveRedisUrl());
   return redisClientPromise;
 }
 
@@ -52,10 +39,6 @@ export async function disconnectRedis(): Promise<void> {
   redisClientPromise = null;
   const client = await clientPromise.catch(() => null);
   if (client?.isOpen) await client.quit();
-  if (memoryServer) {
-    await memoryServer.stop();
-    memoryServer = undefined;
-  }
 }
 
 let mongoConnectPromise: Promise<typeof mongoose> | null = null;
