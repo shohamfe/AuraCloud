@@ -1,36 +1,68 @@
-import { createRequire } from "node:module";
+import company from "./fixtures/company.json" with { type: "json" };
+import inviteCode from "./fixtures/invite-code.json" with { type: "json" };
+import initialTeams from "./fixtures/teams.json" with { type: "json" };
+import initialEmployees from "./fixtures/employees.json" with { type: "json" };
+import awsUsers from "./fixtures/aws-users.json" with { type: "json" };
+import initialWatchlistPresets from "./fixtures/watchlist-presets.json" with { type: "json" };
+import userPermissions from "./fixtures/user-permissions.json" with { type: "json" };
+import initialUserResourceWatchlist from "./fixtures/user-resource-watchlist.json" with { type: "json" };
+import presetResources from "./fixtures/user-resource-watchlist-preset.json" with { type: "json" };
+import resources from "./fixtures/resources.json" with { type: "json" };
+import resourceActionsByServiceRaw from "./fixtures/resource-actions.json" with { type: "json" };
 
-// tsx (dev) and esbuild (Vercel) both handle require() of JSON reliably;
-// static ESM JSON imports need a runtime-specific assertion syntax this avoids.
-const require = createRequire(import.meta.url);
+const resourceActionsByService = resourceActionsByServiceRaw as Record<string, unknown[]>;
 
-const company = require("./fixtures/company.json");
-const inviteCode = require("./fixtures/invite-code.json");
-const initialTeams = require("./fixtures/teams.json");
-const initialEmployees = require("./fixtures/employees.json");
-const awsUsers = require("./fixtures/aws-users.json");
-const initialWatchlistPresets = require("./fixtures/watchlist-presets.json");
-const userPermissions = require("./fixtures/user-permissions.json");
-const initialUserResourceWatchlist = require("./fixtures/user-resource-watchlist.json");
-const presetResources = require("./fixtures/user-resource-watchlist-preset.json");
-const resources = require("./fixtures/resources.json");
-const resourceActionsByService = require("./fixtures/resource-actions.json") as Record<
-  string,
-  unknown[]
->;
+export interface DemoEmployee {
+  _id: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  roleTitle: string;
+  role: string;
+  teamId: string | null;
+  hasAwsConnected: boolean;
+  createdAt: string;
+}
 
-export const DEMO_ADMIN_CUSTOMER_ID = initialEmployees[0]._id as string;
+export interface DemoTeam {
+  _id: string;
+  name: string;
+  createdAt: string;
+}
+
+export interface DemoWatchlistPreset {
+  _id: string;
+  companyId: string;
+  scopeType: string;
+  scopeId: string;
+  name: string;
+  resources: Array<{ arn: string; actions: string[] }>;
+  createdBy: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface DemoWatchlistItem {
+  _id: string;
+  name: string;
+  userId: string;
+  resources: Array<{ arn: string; actions: string[]; name?: string; status?: string }>;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export const DEMO_ADMIN_CUSTOMER_ID = initialEmployees[0]._id;
 
 /** Frozen scan of admin@aura.com's real data, sanitized and mutable in-memory for the demo session. */
 export const store = {
   company,
   inviteCode,
-  teams: [...initialTeams],
-  employees: [...initialEmployees],
+  teams: [...initialTeams] as DemoTeam[],
+  employees: [...initialEmployees] as DemoEmployee[],
   awsUsers,
-  watchlistPresets: [...initialWatchlistPresets],
+  watchlistPresets: [...initialWatchlistPresets] as DemoWatchlistPreset[],
   userPermissions,
-  userResourceWatchlist: [...initialUserResourceWatchlist],
+  userResourceWatchlist: [...initialUserResourceWatchlist] as DemoWatchlistItem[],
   presetResources,
   resources,
 };
